@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+prophet
+scikit-learn
+missingno
+joblib
+streamlit
+python-dotenv
+langchain-google-genai
+langchain-core
+# . e
+langchain-community
