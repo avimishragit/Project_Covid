@@ -20,32 +20,36 @@ This project is a production-ready, modular pipeline for COVID-19 data analysis,
 - **Logging:** All scripts log actions and errors to `logs/app.log` for easy debugging and monitoring.
 - **Testing:** Comprehensive unit tests for modeling functions, including edge cases.
 
+
 ## Project Structure
 ```
 Covid/
-├── Data_modified/           # Processed and forecasted data CSVs
-├── Data_original/           # Raw COVID-19 data
-├── logs/                    # Log files
-├── Model_parameters/        # Saved model parameter JSONs
-├── Models/                  # Trained Prophet models
-├── notebooks/               # Jupyter notebooks for exploration
-├── project/                 # All main Python scripts
-│   ├── config.py
-│   ├── data_acquisition.py
-│   ├── data_preprocessing.py
-│   ├── feature_engineering.py
-│   ├── eda.py
-│   ├── modeling.py
-│   ├── evaluation.py
-│   ├── forecasting.py
-│   ├── visualization.py
-│   ├── pipeline.py
-│   ├── streamlit_app.py
-│   ├── logging_config.py
-│   ├── test_modeling.py
-│   └── setup.py
+├── Data_modified/           # Processed and forecasted data CSVs (per country/region/type)
+├── Data_original/           # Raw COVID-19 data (e.g., covid.csv)
+├── logs/                    # Log files (app.log, etc.)
+├── Model_parameters/        # Saved model parameter JSONs (per model/country/type)
+├── Models/                  # Trained Prophet models (joblib files)
+├── notebooks/               # Jupyter notebooks for exploration and prototyping
+├── project/                 # All main Python scripts and modules
+│   ├── config.py                # Global config and constants
+│   ├── data_acquisition.py      # Data download and ingestion
+│   ├── data_preprocessing.py    # Data cleaning and preprocessing
+│   ├── feature_engineering.py   # Feature creation and transformation
+│   ├── eda.py                   # Exploratory data analysis
+│   ├── modeling.py              # Prophet modeling functions
+│   ├── evaluation.py            # Model evaluation metrics
+│   ├── forecasting.py           # Forecasting logic
+│   ├── visualization.py         # Plotting and visualization utilities
+│   ├── pipeline.py              # End-to-end pipeline orchestration
+│   ├── streamlit_app.py         # Streamlit dashboard app
+│   ├── chatbot_gemini.py        # Gemini+LangChain chatbot integration
+│   ├── web_search_agent.py      # DuckDuckGo web search fallback for chatbot
+│   ├── logging_config.py        # Logging setup
+│   ├── test_modeling.py         # Unit tests for modeling
+│   └── setup.py                 # Packaging/setup script
 ├── requirements.txt         # Python dependencies
-├── README.md                # This file
+├── .env                     # Environment variables (not committed)
+├── README.md                # Project documentation
 └── ...
 ```
 
